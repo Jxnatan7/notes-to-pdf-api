@@ -11,7 +11,7 @@ app.get("/note-to-pdf", async (req, res) => {
             return res.status(400).send("The URL was not provided.");
         }
 
-        const browser = await puppeteer.launch();
+        const browser = await puppeteer.launch({ args: ['--no-sandbox'] });
 
         const page = await browser.newPage();
 
