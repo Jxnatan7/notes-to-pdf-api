@@ -7,7 +7,7 @@ class NoteController {
         try {
             const noteService = new NoteService();
 
-            const url = req.query.url as string;
+            const url = `${req.query.url}`;
 
             if (!url) {
                 return res.status(400).send("The URL was not provided.");

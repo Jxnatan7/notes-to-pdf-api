@@ -40,6 +40,8 @@ RUN apt-get update && apt-get install -y \
     && apt-get purge --auto-remove -y curl \
     && apt-get clean
 
+ENV PUPPETEER_SKIP_DOWNLOAD true
+
 EXPOSE 3000
 
 CMD [ "npm", "start" ]
