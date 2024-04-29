@@ -19,6 +19,8 @@ class NoteService {
         await browser.close();
 
         const base64String = pdfBuffer.toString('base64');
+
+        return base64String;
     }
 }
 
