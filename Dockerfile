@@ -37,12 +37,8 @@ RUN apt-get update && apt-get install -y \
     && apt-get update \
     && apt-get install -y google-chrome-stable \
     && rm -rf /var/lib/apt/lists/* \
-    && apt-get purge --auto-remove -y wget \
+    && apt-get purge --auto-remove -y curl \
     && apt-get clean
-
-ENV PUPPETEER_EXECUTABLE_PATH="/usr/bin/google-chrome-stable"
-
-ENV PUPPETEER_SKIP_DOWNLOAD=true
 
 EXPOSE 3000
 
